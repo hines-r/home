@@ -6,31 +6,23 @@ const navBar = {
 // Main Body SECTION
 const mainBody = {
   gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
-  firstName: "Hashir",
+  firstName: "Ryan",
   middleName: "",
-  lastName: "Shoaib",
-  message: " Passionate about changing the world with technology. ",
+  lastName: "Hines",
+  message: "Passionate about changing the world with technology",
   icons: [
     {
-      image: "fa-github",
-      url: "https://github.com/hashirshoaeb",
+      image: "fas fa-envelope",
+      url: "mailto:ryan.hines.cs@gmail.com",
     },
     {
-      image: "fa-facebook",
-      url: "https://www.facebook.com/hashirshoaeb",
+      image: "fab fa-github",
+      url: "https://github.com/hines-r",
     },
     {
-      image: "fa-instagram",
-      url: "https://www.instagram.com/hashirshoaeb/",
-    },
-    {
-      image: "fa-linkedin",
-      url: "https://www.linkedin.com/in/hashirshoaeb/",
-    },
-    {
-      image: "fa-twitter",
-      url: "https://www.twitter.com/hashirshoaeb/",
-    },
+      image: "fab fa-linkedin",
+      url: "https://www.linkedin.com/in/hines-r/",
+    }
   ],
 };
 
@@ -51,12 +43,47 @@ const mainBody = {
 const about = {
   show: true,
   heading: "About Me",
-  imageLink: require("../editable-stuff/hashirshoaeb.png"),
   imageSize: 375,
+  profilePictureLink: require("../editable-stuff/portrait.jpg"),
   message:
-    "My name is Hashir Shoaib. I’m a graduate of 2020 from National University of Sciences and Technology at Islamabad with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on open source projects.",
-  resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+    "My name is Ryan Hines. I'm a software engineer based in Lubbock, Texas with a passion for learning new technologies and building exceptional applications. I enjoy the process of creation and solving complex problems with software solutions that help make peoples lives easier. As of late, I've been learning more about the ins and outs of web and mobile development using Flutter.",
+  resume: require("../editable-stuff/rhines-resume.pdf"),
 };
+
+const projects = {
+  show: true,
+  heading: "Projects",
+  projList: [
+    {
+      title: "Kaomojicon",
+      img: require("../assets/img/kaomojicon.png"),
+      link: "https://play.google.com/store/apps/details?id=com.nyanix.kaomojicon",
+      technologies: [ "Flutter", "Dart" ],
+      description: "Kaomojicon is a Flutter app used to discover and use thousands of different kaomojis (text-based emoticons) in all forms of digital chat. It is published and available for Android on the Google Play Store. The app features the ability to save, search, and create your very own unique kaomojis. Kaomojicon is also extremely customizable, allowing you to change the app to any color and includes a selection of fonts. Kaomojis can express moods in text messages and other forms of digital communication to make your conversations more fun, exciting, and meaningful. It uses a fast key-value database called Hive to persist data within the app."
+    },
+    {
+      title: "PassMaid",
+      img: require("../assets/img/passmaid.png"),
+      link: "https://github.com/hines-r/PassMaid",
+      technologies: [ "C#", "WPF", "SQLite" ],
+      description: "PassMaid is an easy-to-use password manager for storing and generating strong passwords for all of your online accounts. It uses strong cryptographic hashing functions, salting, and encryption to securely save passwords to a local SQLite database. PassMaid can also generate secure passwords for you and allows multiple users to create an account for use."
+    },
+    {
+      title: "Fitbit Clocks",
+      img: require("../assets/img/fitbit.png"),
+      link: "https://gallery.fitbit.com/search?terms=ryan%20hines",
+      technologies: [ "JavaScript", "CSS" ],
+      description: "I personally own a Fitbit Versa 2 and couldn't find any clockfaces I enjoyed so I decided to make my own! They're coded in JavaScript using the Fitbit SDK and are stylized with CSS and SVG graphics. I have made a total of 10 clockfaces with incremental improvements to the codebase and optimizations to battery life of wearable devices. The clocks are published on the Fitbit Gallery and have cumuatively garnered 10,000+ downloads."
+    },
+    {
+      title: "Pixel Chaos",
+      img: require("../assets/img/pixelchaos.gif"),
+      link: "https://github.com/hines-r/pixel-chaos",
+      technologies: [ "C#", "Unity" ],
+      description: "Pixel Chaos is a defend the castle type mobile game featuring endless waves of enemies and real-world physics calculations baked in the gameplay. It features 13 unique units and two distinct upgrade paths each. The waves of enemies are randomly generated based on weighted probabilities, and the game infinitely scales. The game was made to simulate real physics and uses kinematic equations to calculate the projectile motion required to hit moving enemy targets with projectiles. It was built using the Unity game engine and is playable on both Android and IOS."
+    }
+  ]
+}
 
 // PROJECTS SECTION
 // Setting up project lenght will automatically fetch your that number of recently updated projects, or you can set this field 0 to show none.
@@ -65,10 +92,10 @@ const about = {
 //      i.e ["repository-1", "repo-2"]
 const repos = {
   show: true,
-  heading: "Recent Projects",
-  gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
-  reposLength: 4,
-  specificRepos: [],
+  heading: "Other Projects",
+  gitHubUsername: "hines-r",
+  reposLength: 0,
+  specificRepos: [ 'virtual-woodcutter', 'AniNeko',  'TileEngine', 'VR-Interactions', 'FourBot', 'kaomoji-api' ],
 };
 
 // Leadership SECTION
@@ -78,16 +105,16 @@ const leadership = {
   message:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae auctor eu augue ut lectus arcu bibendum at varius. Libero justo laoreet sit amet cursus sit amet. Imperdiet dui accumsan sit amet nulla facilisi morbi. At auctor urna nunc id. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Et magnis dis parturient montes nascetur ridiculus mus mauris. In nisl nisi scelerisque eu ultrices vitae auctor. Mattis nunc sed blandit libero volutpat sed cras ornare. Pulvinar neque laoreet suspendisse interdum consectetur libero.",
   images: [
-    { 
-      img: require("../editable-stuff/hashirshoaeb.png"), 
-      label: "First slide label", 
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
-    },
-    { 
-      img: require("../editable-stuff/hashirshoaeb.png"), 
-      label: "Second slide label", 
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
-    },
+    // { 
+    //   img: require(""), 
+    //   label: "First slide label", 
+    //   paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    // },
+    // { 
+    //   img: require(""), 
+    //   label: "Second slide label", 
+    //   paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    // },
   ],
   imageSize: {
     width:"615",
@@ -98,16 +125,19 @@ const leadership = {
 // SKILLS SECTION
 const skills = {
   show: true,
-  heading: "Skills",
+  heading: "Technical Skills",
   hardSkills: [
-    { name: "Python", value: 90 },
+    { name: "C#", value: 95 },
+    { name: "JavaScript", value: 85 },
+    { name: "Java", value: 75 },
+    { name: "HTML/CSS", value: 90 },
+    { name: "Git", value: 95 },
+
     { name: "SQL", value: 75 },
-    { name: "Data Structures", value: 85 },
-    { name: "C/C++", value: 65 },
-    { name: "JavaScript", value: 90 },
-    { name: "React", value: 65 },
-    { name: "HTML/CSS", value: 55 },
-    { name: "C#", value: 80 },
+    { name: "Delphi", value: 70 },
+    { name: "Flutter/Dart", value: 75 },
+    { name: "ASP.NET", value: 90 },
+    { name: "React", value: 40 },
   ],
   softSkills: [
     { name: "Goal-Oriented", value: 80 },
@@ -123,7 +153,7 @@ const skills = {
 
 // GET IN TOUCH SECTION
 const getInTouch = {
-  show: true,
+  show: false,
   heading: "Get In Touch",
   message:
     "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
@@ -134,16 +164,7 @@ const experiences = {
   show: false,
   heading: "Experiences",
   data: [
-    {
-      role: 'Software Engineer',// Here Add Company Name
-      companylogo: require('../assets/img/dell.png'),
-      date: 'June 2018 – Present',
-    },
-    {
-      role: 'Front-End Developer',
-      companylogo: require('../assets/img/boeing.png'),
-      date: 'May 2017 – May 2018',
-    },
+
   ]
 }
 
@@ -152,4 +173,4 @@ const experiences = {
 //   show: false,
 // };
 
-export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences };
+export { navBar, mainBody, about, projects, repos, skills, leadership, getInTouch, experiences };

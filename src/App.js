@@ -4,6 +4,7 @@ import {
   navBar,
   mainBody,
   about,
+  projects,
   repos,
   leadership,
   skills,
@@ -12,6 +13,7 @@ import {
 } from "./editable-stuff/config.js";
 import MainBody from "./components/home/MainBody";
 import AboutMe from "./components/home/AboutMe";
+import PersonalProjects from "./components/home/PersonalProjects.jsx"
 import Project from "./components/home/Project";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -37,8 +39,6 @@ const Home = React.forwardRef((props, ref) => {
         <AboutMe
           heading={about.heading}
           message={about.message}
-          link={about.imageLink}
-          imgSize={about.imageSize}
           resume={about.resume}
         />
       )}
@@ -47,6 +47,12 @@ const Home = React.forwardRef((props, ref) => {
           <Experience experiences={experiences}/>
         )
       }
+      {projects.show && (
+        <PersonalProjects
+          heading={projects.heading}
+          projList={projects.projList}
+        />
+      )}
       {repos.show && (
         <Project
           heading={repos.heading}

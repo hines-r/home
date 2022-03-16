@@ -14,8 +14,6 @@ const dummyProject = {
   pushed_at: null,
 };
 const API = "https://api.github.com";
-// const gitHubQuery = "/repos?sort=updated&direction=desc";
-// const specficQuerry = "https://api.github.com/repos/hashirshoaeb/";
 
 const Project = ({ heading, username, length, specfic }) => {
   const allReposAPI = `${API}/users/${username}/repos?sort=updated&direction=desc`;
@@ -55,9 +53,9 @@ const Project = ({ heading, username, length, specfic }) => {
   }, [fetchRepos]);
 
   return (
-    <Jumbotron fluid id="projects" className="bg-light m-0">
+    <Jumbotron fluid id="other-projects" className="bg-light m-0 pt-0">
       <Container className="">
-        <h2 className="display-4 pb-5 text-center">{heading}</h2>
+        {/* <h2 className="display-4 pb-5 text-center">{heading}</h2> */}
         <Row>
           {projectsArray.length
             ? projectsArray.map((project, index) => (
