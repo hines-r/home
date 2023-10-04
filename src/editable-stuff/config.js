@@ -137,7 +137,7 @@ const skills = {
     { name: "Delphi", value: 70 },
     { name: "Flutter/Dart", value: 75 },
     { name: "ASP.NET", value: 90 },
-    { name: "React", value: 40 },
+    { name: "AngularJS", value: 60 },
   ],
   softSkills: [
     { name: "Goal-Oriented", value: 80 },
